@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Cheatsheet Concept</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- Bulma Version 0.9.0-->
+    <link rel='stylesheet' href='https://unpkg.com/bulma@0.9.0/css/bulma.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
+    <link rel='stylesheet' href='https://kingsora.github.io/OverlayScrollbars/etc/os-theme-thin-dark.css'>	  
+    <link rel='stylesheet' href="prism1.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="nuclear.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <!-- start of navBar -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <img src="./public/images/favIconNewARheadSmall.png" width="100%" >
+          </a>
+      
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item has-text-black has-text-weight-bold" href="/">
+              Home
+            </a>
+      
+            <a class="navbar-item has-text-black has-text-weight-bold" href="/">
+              Services
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link has-text-black has-text-weight-bold" href="/">
+                More
+              </a>
+      
+              <div class="navbar-dropdown">
+                <a class="navbar-item has-text-black has-text-weight-bold" href="/">
+                  Blog
+                </a>                
+                <a class="navbar-item has-text-black has-text-weight-bold" href="/">
+                  Contact
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item has-text-black has-text-weight-bold" href="/">
+                  Report an issue
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-link is-rounded" href="/auth/login">
+                  <strong>Log in</strong>
+                </a>
+                <a class="button is-link  is-rounded" href="/auth/signup">
+                  Sign up
+                </a>
+                <a class="button is-link  is-rounded" href="/auth/logout">
+                  Logout
+                </a>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      {{{body}}}
+      <script src="/javascripts/script.js"></script>
+</body>
+</html>
