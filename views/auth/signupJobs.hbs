@@ -1,0 +1,33 @@
+
+
+<div class="container is-full has-text-centered">
+    <br>
+    <br>
+    <div class="pl-6 pb-6">
+      <h1 class="title">Signup:</h1>
+
+<form action="/signup-jobs" method="POST" id="form-container">
+  <label for="username">Username</label>
+  <input id="username" type="text" name="username" placeholder="JonSnow">
+
+  <br><br>
+
+  <label for="password">Password</label>
+  <input id="password" type="password" name="password" placeholder="Your password">
+  <br>
+  {{#if message }}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+
+  <br><br>
+
+  <button>Create account</button>
+
+  <p class="account-message">
+    Do you already have an account?
+    <a href="/auth/login">Login</a>
+  </p>
+  <br>
+  <br>
+</form>
+</div>

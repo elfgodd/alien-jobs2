@@ -12,7 +12,7 @@ const userSchema = new Schema({
     role: {
         type: String,
         enum: ['ADMIN', 'USER'],
-        default: 'JOBS'
+        default: 'USER'
     },
   }, 
   {

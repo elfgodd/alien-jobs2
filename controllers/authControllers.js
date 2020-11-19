@@ -6,7 +6,7 @@ const passport = require('passport');
 
 exports.indexView = (req, res) => res.render('index')
 exports.signupViewUser = (req, res) => res.render('auth/signupUser')
-exports.signupViewJob = (req, res) => res.render('auth/signupJobs')
+exports.signupViewJobs = (req, res) => res.render('auth/signupJobs')
 
 exports.signupProcessUser = async(req, res) => {
     const { email, password, name } = req.body
@@ -31,11 +31,11 @@ exports.signupProcessUser = async(req, res) => {
 exports.signupProcessJob = async(req, res) => {
     const { email, password, name } = req.body
     if (!email || !password) {
-        return res.render('auth/signupJob', { errorMessage: 'Por favor llena los campos' })
+        return res.render('auth/signupJobs', { errorMessage: 'Por favor llena los campos' })
     }
     const user = await User.findOne({ email })
     if (user) {
-        return res.render('auth/signupJob', { errorMessage: 'el usuario ya existe' })
+        return res.render('auth/signupJobs', { errorMessage: 'el usuario ya existe' })
     }
     const salt = bcrypt.genSaltSync(12)
     const hashPass = bcrypt.hashSync(password, salt)
@@ -60,8 +60,9 @@ exports.loginProcess = passport.authenticate('local', {
 
 exports.logout = (req, res) => {
     req.logout()
-    res.redirect('/login')
+    res.redirect('/')
 }
+
 
 exports.profileView = async(req, res) => {
     const id = req.session.passport.user

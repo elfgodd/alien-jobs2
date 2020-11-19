@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alien jobs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  </head>
+  <body>
+  <section class="section pt-5 has-background-light">
+    <div class="container ">
+        <div class="columns">  
+        <div class="column is-half has-background-light">
+            
+                <h1 class="title">Alien jobs</h1>
+                  
+                <h2 class="subtitle">
+                    Dashboard:
+                 </h2>
+                 <div class="container" id='user-list'>
+
+                 </div>               
+        
+        </div>
+        <!-- CREATE -->
+         <div class="column is-half has-background-light">
+            <h1 class="title">Create: </h1>
+            <form id="create-form">
+            <div class="field">
+                <label class="label">Job title:</label>
+                <div class="control">
+                  <input class="input" type="text" id="job-title" placeholder="Job title goes here">
+                </div>
+            </div>
+            
+            <div class="field">
+                <label class="label">Job description:</label>
+                <div class="control">
+                  <textarea class="textarea" id="job-description" placeholder="Job description goes here"></textarea>
+                </div>
+            </div>
+            <p class="is-size-5">Skill:</p>
+            <div class="select" >
+                <select id="skill">                   
+                  <option>Select dropdown</option>
+                  <option value="fullstack">Fullstack</option>
+                  <option value="frontend">Frontend</option>
+                  <option value="backend">Backend</option>
+                  <option value="devops">Devops</option>
+                  <option value="datascience">Datascience</option>
+                  <option value="cybersecurity">Cybersecurity</option>                  
+                </select>
+            </div>            
+            <button type="submit" class="button is-small is-fullwidth">Create</button>
+            </form>
+            <hr>
+            <!-- UPDATE -->
+           
+            <div class="column is-half">
+              <h1 class="title">Update: </h1>
+              <label for="id" class="is-size-5">ID: </label>
+              <input type="number" min="1" class="form-control" id="userid" placeholder="User id">
+              <br>
+              <button id='get-user-data' class="button is-small is-fullwidth mt-2">Get user data</button>
+              <br>
+              <form id="update-form">
+              <div class="field">
+                  <label class="label">Job title:</label>
+                  <div class="control">
+                    <input class="input" type="text" id="job-title-update" placeholder="Job title update">
+                  </div>
+              </div>
+              
+              <div class="field">
+                  <label class="label">Job description:</label>
+                  <div class="control">
+                    <textarea class="textarea" id="job-description-update" placeholder="Job description update"></textarea>
+                  </div>
+              </div>
+              <p class="is-size-5">Skill:</p>
+              <div class="select">
+                  <select id="skill-update">                   
+                    <option>Select dropdown</option>
+                    <option value="fullstack">Fullstack</option>
+                    <option value="frontend">Frontend</option>
+                    <option value="backend">Backend</option>
+                    <option value="devops">Devops</option>
+                    <option value="datascience">Datascience</option>
+                    <option value="cybersecurity">Cybersecurity</option>                  
+                  </select>
+              </div>            
+              <button type="submit" class="button is-small is-fullwidth">Update</button>
+            </form>
+              <br>            
+         </div>
+     </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+</html>
