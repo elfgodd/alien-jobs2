@@ -14,15 +14,6 @@ const MongoStore = require('connect-mongo')(session);
 const flash      = require("connect-flash");
     
 
-mongoose
-  .connect(process.env.MONGO_URI || 'mongodb://localhost/be-alien-jobs', {useNewUrlParser: true})
-  .then(x => {
-    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
-  })
-  .catch(err => {
-    console.error('Error connecting to mongo', err)
-  });
-
 const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
 
@@ -77,7 +68,7 @@ app.use(flash());
 require('./passport')(app);
     
 
-const index = require('./routes/index');
+const index = require('./routes/job');
 app.use('/', index);
 
 const authRoutes = require('./routes/auth');

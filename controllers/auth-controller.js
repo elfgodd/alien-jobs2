@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt')
-const User = require('../models/User')
+const User = require('../models/user-model')
 //const passport = require('../config/passport')
 //const { emailRegistro } = require('../config/nodemailer')
 const passport = require('passport');

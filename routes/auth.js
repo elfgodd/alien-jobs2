@@ -1,12 +1,12 @@
 
 const { Router } = require('express');
 // i removed profilePicture from de destruction
-const { logout, signupViewUser, signupViewJobs, signupProcessUser, loginView, indexView, signupProcessJob, loginProcess, profileView } = require('../controllers/authControllers');
+const { logout, signupViewUser, signupViewJobs, signupProcessUser, loginView, indexView, signupProcessJob, loginProcess, profileView } = require('../controllers/auth-controller');
 //const uploadPicture = require('../config/ cloudinary')
 
 const router = Router()
 router.get('/', indexView)
-router.get('/signup', signupViewUser);
+router.get('/signup', signupViewUser)
 router.get('/signup-jobs', signupViewJobs)
 router.post('/signup', signupProcessUser)
 router.post('/signup-jobs', signupProcessJob)
